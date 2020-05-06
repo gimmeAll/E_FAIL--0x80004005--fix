@@ -1,0 +1,22 @@
+If virtual box says that vt-x or and-v aren’t enabled or the vim console wrap shows
+“E_FAIL (0x80004005)” even if virtualization is enabled in bios, here is how to fix it.
+
+1. Right-click on the windows icon
+
+2. Click windows power shell (admin)
+
+3. Once fully pulled up type (without “) “bcdedit /set hypervisorlaunchtype Off”
+
+4. Once is states that the operation was a success, hard reboot the computer twice (make
+sure after holding the power button for more than 10 seconds and then powering it back
+up again, sign into the computer and let it start up, then perform the next hard reboot)
+
+5. If Windows, on the second reboot, states that there was a problem starting up your
+computer (scared the living shit out of me), don’t panic! Just go to wherever it says
+“continue to windows startup (partition 3)” click it, and you should be able to boot back to
+startup.
+
+6. Once signed in and the computer is fully setup, go to whatever kind of virtualization app
+you use, attempt to start a vm, and it should work.
+
+And that’s all the support I can add onto this situation, bye bye!
